@@ -19,7 +19,7 @@ print(sum) # sum = 3
 ## Installaion
 
 ```bash
-$ pip3 install ssl-lab-test
+$ pip3 install ssllabtest
 ``` 
 
 Only install module with pip
