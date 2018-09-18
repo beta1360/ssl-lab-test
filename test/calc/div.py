@@ -1,5 +1,5 @@
 import unittest
-from main.calc import Caculator
+from ssllabtest.calc import Caculator
 
 class MyCalcTest(unittest.TestCase):
     def test_module(self):

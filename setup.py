@@ -13,6 +13,7 @@ setup(
     keywords        = ['Test', 'TDD', 'Deployment', 'Seminar'],
     python_requires = '>=3',
     zip_safe        = False,
+    license         = 'GPLv3',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',

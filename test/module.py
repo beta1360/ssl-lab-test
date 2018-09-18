@@ -1,5 +1,5 @@
 import unittest
-from main.calc import Caculator
+from ssllabtest.calc import Caculator
 
 calc = Caculator(True, True, True, True, True)
 dict = calc.getStatus()

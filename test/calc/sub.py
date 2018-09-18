@@ -1,5 +1,5 @@
 import unittest
-from main.calc import Caculator
+from ssllabtest.calc import Caculator
 
 calc = Caculator(isAdd=False,
                  isSub=True,
