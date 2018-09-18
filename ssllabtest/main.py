@@ -51,3 +51,4 @@ class Caculator:
             "div": self.isDiv,
             "rem": self.isRem
         }
+
