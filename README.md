@@ -5,7 +5,7 @@ SSL-Seminar-test repository:: Topic - Package Test and Deployment
 ## Synopsis
 
 ```python
-from ssllabtest import Caculator 
+from khleepkg03.app import Caculator 
 
 calc = Caculator(isAdd=True,
                  isSub=False,
@@ -19,7 +19,7 @@ print(sum) # sum = 3
 ## Installaion
 
 ```bash
-$ pip3 install ssllabtest
+$ pip3 install khleepkg03
 ``` 
 
 Only install module with pip

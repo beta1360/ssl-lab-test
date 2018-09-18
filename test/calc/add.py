@@ -1,5 +1,5 @@
 import unittest
-from ssllabtest.calc import Caculator
+from khleepkg03.app import Caculator
 
 calc = Caculator(isAdd=True,
                  isSub=False,
