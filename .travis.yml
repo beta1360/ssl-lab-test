@@ -11,10 +11,10 @@ install:
   - pip install coveralls
 
 script:
-  - coverage run --source=app setup.py test
+  - nosetests --with-coverage --cover-package=khleepkg03
 
 after_success:
-  coveralls
+  - coveralls
 
 branches:
   only:
