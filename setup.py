@@ -14,7 +14,7 @@ setup(
     url             = "https://github.com/KeonHeeLee/ssl-lab-test",
     download_url    = "https://github.com/KeonHeeLee/ssl-lab-test/archive/v1.0.0.tar.gz",
     install_requires= [],
-    packages        = find_packages(exclude=['test']),
+    packages        = ["ssllabtest"],
     keywords        = ['Test', 'TDD', 'Deployment', 'Seminar'],
     python_requires = '>=3',
     zip_safe        = False,
