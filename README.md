@@ -1,6 +1,7 @@
 # SSL-Lab-seminar-test
 
 [![Build Status](https://travis-ci.org/KeonHeeLee/ssl-lab-test.svg?branch=master)](https://travis-ci.org/KeonHeeLee/ssl-lab-test)
+[![Coverage Status](https://coveralls.io/repos/github/KeonHeeLee/ssl-lab-test/badge.svg?branch=master)](https://coveralls.io/github/KeonHeeLee/ssl-lab-test?branch=master)
 
 SSL-Seminar-test repository:: Topic - Package Test and Deployment
 
