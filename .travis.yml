@@ -10,7 +10,7 @@ python:
   - "3.7"
 
 install:
-  - pip install -r requirement.txt
+  - pip install -r requirements.txt
   - pip install khleepkg03
 
 script:
