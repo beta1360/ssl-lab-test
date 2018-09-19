@@ -12,19 +12,19 @@ class Caculator:
             sum = num1 + num2
             return sum
         else:
-            raise("Adder is not true.")
+            raise(ValueError)
 
     def substraction(self, num1, num2):
         if self.isSub == True:
             return (num1 - num2)
         else:
-            raise("Substrator is not true.")
+            raise(ValueError)
 
     def multiplication(self, num1, num2):
         if self.isMul == True:
             return (num1 * num2)
         else:
-            raise("Multiplication is not true.")
+            raise(ValueError)
 
     def division(self, num1, num2):
         if self.isDiv == True:
@@ -41,7 +41,7 @@ class Caculator:
                 print(error)
                 return 0
         else:
-            raise("Division is not true.")
+            raise(ValueError)
 
     def getStatus(self):
         return {

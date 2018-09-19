@@ -22,10 +22,8 @@ class MyCalcTest(unittest.TestCase):
                          isDiv=True,
                          isRem=True)
         div, rem = calc.division(4, 2)
-        self.assertEqual(div, 2,
-                         msg="not equal:: %d != %d" %(div, 2))
-        self.assertEqual(rem, 0,
-                         msg="not equal:: %d != %d" %(div, 0))
+        self.assertEqual([div, rem], [2, 0],
+                         msg="not equal:: %d, %d != %d, %d" %(div, rem, 2, 0))
 
     def test_division_2(self):
         calc = Caculator(isAdd=False,
@@ -34,10 +32,8 @@ class MyCalcTest(unittest.TestCase):
                          isDiv=True,
                          isRem=True)
         div, rem = calc.division(-4, 2)
-        self.assertEqual(div, -2,
-                         msg="not equal:: %d != %d" %(div, -2))
-        self.assertEqual(rem, 0,
-                         msg="not equal:: %d != %d" %(div, 0))
+        self.assertEqual([div, rem], [-2, 0],
+                         msg="not equal:: %d, %d != %d, %d" %(div, rem, -2, 0))
 
     def test_division_3(self):
         calc = Caculator(isAdd=False,
@@ -46,19 +42,70 @@ class MyCalcTest(unittest.TestCase):
                          isDiv=True,
                          isRem=True)
         div, rem = calc.division(-4, -2)
-        self.assertEqual(div, 2,
-                         msg="not equal:: %d != %d" %(div, 2))
-        self.assertEqual(rem, 0,
-                         msg="not equal:: %d != %d" %(div, 0))
+        self.assertEqual([div, rem], [2, 0],
+                         msg="not equal:: %d, %d != %d, %d" %(div, rem, 2, 0))
 
     def test_division_4(self):
         calc = Caculator(isAdd=False,
                          isSub=False,
                          isMul=False,
                          isDiv=True,
+                         isRem=False)
+        div = calc.division(-4, -2)
+        self.assertEqual(div, 2,
+                         msg="not equal:: %d != %d" %(div, 2))
+
+    def test_error_zero_division(self):
+        calc = Caculator(isAdd=False,
+                         isSub=False,
+                         isMul=False,
+                         isDiv=True,
+                         isRem=False)
+        try:
+            calc.division(4, 0)
+        except Exception as e:
+            self.assertEqual(e, ZeroDivisionError)
+
+    def test_type_1(self):
+        calc = Caculator(isAdd=False,
+                         isSub=False,
+                         isMul=False,
+                         isDiv=True,
                          isRem=True)
-        div = calc.division(4, 0)
-        self.assertRaises(ZeroDivisionError)
+        with self.assertRaises(ValueError):
+            calc.adder(0, 1)
+
+    def test_type_2(self):
+        calc = Caculator(isAdd=False,
+                         isSub=False,
+                         isMul=False,
+                         isDiv=True,
+                         isRem=True)
+        with self.assertRaises(ValueError):
+            calc.substraction(0, 1)
+
+    def test_type_3(self):
+        calc = Caculator(isAdd=False,
+                         isSub=False,
+                         isMul=False,
+                         isDiv=True,
+                         isRem=True)
+        with self.assertRaises(ValueError):
+            calc.multiplication(0, 1)
+
+    def test_type_4(self):
+        calc = Caculator(isAdd=False,
+                         isSub=False,
+                         isMul=False,
+                         isDiv=True,
+                         isRem=False)
+
+        try:
+            div, rem = calc.division(1, 2)
+            print(div + " and " + rem)
+
+        except Exception as e:
+            if e != None: pass
 
 if __name__ == "__main__":
     unittest.main()
