@@ -1,7 +1,7 @@
 import unittest
 from khleepkg03.app import Caculator
 
-class MyCalcTest(unittest.TestCase):
+class TestPackage(unittest.TestCase):
     def test_module(self):
         calc = Caculator(isAdd=True,
                          isSub=False,
@@ -21,9 +21,7 @@ class MyCalcTest(unittest.TestCase):
                          isMul=False,
                          isDiv=False,
                          isRem=False)
-        sum = calc.adder(1, 2)
-        self.assertEqual(sum, 3,
-                         msg="not equal:: %d != %d" %(sum, 3))
+        self.assertEqual(calc.adder(1, 2), 3)
 
     def test_adder_2(self):
         calc = Caculator(isAdd=True,
@@ -31,9 +29,7 @@ class MyCalcTest(unittest.TestCase):
                          isMul=False,
                          isDiv=False,
                          isRem=False)
-        sum = calc.adder(-1, 2)
-        self.assertEqual(sum, 1,
-                         msg="not equal:: %d != %d" %(sum, 1))
+        self.assertEqual(calc.adder(1, -2), -1)
 
     def test_adder_3(self):
         calc = Caculator(isAdd=True,
@@ -41,9 +37,7 @@ class MyCalcTest(unittest.TestCase):
                          isMul=False,
                          isDiv=False,
                          isRem=False)
-        sum = calc.adder(-1, -2)
-        self.assertEqual(sum, -3,
-                         msg="not equal:: %d != %d" %(sum, -3))
+        self.assertEqual(calc.adder(-1, -2), -3)
 
     def test_adder_4(self):
         calc = Caculator(isAdd=True,
@@ -51,9 +45,7 @@ class MyCalcTest(unittest.TestCase):
                          isMul=False,
                          isDiv=False,
                          isRem=False)
-        sum = calc.adder(0, 0)
-        self.assertEqual(sum, 0,
-                         msg="not equal:: %d != %d" %(sum, 0))
+        self.assertEqual(calc.adder(0, 0), 0)
 
     def test_type_1(self):
         calc = Caculator(isAdd=True,

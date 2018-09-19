@@ -4,7 +4,7 @@ from khleepkg03.app import Caculator
 calc = Caculator(True, True, True, True, True)
 dict = calc.getStatus()
 
-class MyCalcTest(unittest.TestCase):
+class TestPackage(unittest.TestCase):
     def test_module_adder(self):
         # Member Value: Dict["add"]
         if self.assertTrue(dict["add"]):

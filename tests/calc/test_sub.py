@@ -1,7 +1,7 @@
 import unittest
 from khleepkg03.app import Caculator
 
-class MyCalcTest(unittest.TestCase):
+class TestPackage(unittest.TestCase):
     def test_module(self):
         calc = Caculator(isAdd=False,
                  isSub=True,
@@ -21,9 +21,7 @@ class MyCalcTest(unittest.TestCase):
                  isMul=False,
                  isDiv=False,
                  isRem=False)
-        sub = calc.substraction(1, 2)
-        self.assertEqual(sub, -1,
-                         msg="not equal:: %d != %d" %(sub, -1))
+        self.assertEqual(calc.substraction(1, 2), -1)
 
     def test_substractor_2(self):
         calc = Caculator(isAdd=False,
@@ -31,9 +29,7 @@ class MyCalcTest(unittest.TestCase):
                  isMul=False,
                  isDiv=False,
                  isRem=False)
-        sub = calc.substraction(-1, 2)
-        self.assertEqual(sub, -3,
-                         msg="not equal:: %d != %d" %(sub, -3))
+        self.assertEqual(calc.substraction(-1, 2), -3)
 
     def test_substractor_3(self):
         calc = Caculator(isAdd=False,
@@ -41,9 +37,7 @@ class MyCalcTest(unittest.TestCase):
                  isMul=False,
                  isDiv=False,
                  isRem=False)
-        sub = calc.substraction(-1, -2)
-        self.assertEqual(sub, 1,
-                         msg="not equal:: %d != %d" %(sub, 1))
+        self.assertEqual(calc.substraction(1, -2), 3)
 
     def test_substractor_4(self):
         calc = Caculator(isAdd=False,
@@ -51,9 +45,7 @@ class MyCalcTest(unittest.TestCase):
                  isMul=False,
                  isDiv=False,
                  isRem=False)
-        sub = calc.substraction(0, 0)
-        self.assertEqual(sub, 0,
-                         msg="not equal:: %d != %d" %(sub, 0))
+        self.assertEqual(calc.substraction(0, 0), 0)
 
     def test_type_1(self):
         calc = Caculator(isAdd=False,

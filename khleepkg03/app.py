@@ -38,8 +38,8 @@ class Caculator:
                     return n
 
             except ZeroDivisionError as error:
-                print(error)
-                return 0
+                raise error
+
         else:
             raise(ValueError)
 

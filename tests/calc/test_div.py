@@ -1,7 +1,7 @@
 import unittest
 from khleepkg03.app import Caculator
 
-class MyCalcTest(unittest.TestCase):
+class TestPackage(unittest.TestCase):
     def test_module(self):
         calc = Caculator(isAdd=False,
                          isSub=False,
@@ -21,9 +21,7 @@ class MyCalcTest(unittest.TestCase):
                          isMul=False,
                          isDiv=True,
                          isRem=True)
-        div, rem = calc.division(4, 2)
-        self.assertEqual([div, rem], [2, 0],
-                         msg="not equal:: %d, %d != %d, %d" %(div, rem, 2, 0))
+        self.assertEqual(calc.division(4, 2), (2, 0))
 
     def test_division_2(self):
         calc = Caculator(isAdd=False,
@@ -31,9 +29,7 @@ class MyCalcTest(unittest.TestCase):
                          isMul=False,
                          isDiv=True,
                          isRem=True)
-        div, rem = calc.division(-4, 2)
-        self.assertEqual([div, rem], [-2, 0],
-                         msg="not equal:: %d, %d != %d, %d" %(div, rem, -2, 0))
+        self.assertEqual(calc.division(4, -2), (-2, 0))
 
     def test_division_3(self):
         calc = Caculator(isAdd=False,
@@ -41,9 +37,7 @@ class MyCalcTest(unittest.TestCase):
                          isMul=False,
                          isDiv=True,
                          isRem=True)
-        div, rem = calc.division(-4, -2)
-        self.assertEqual([div, rem], [2, 0],
-                         msg="not equal:: %d, %d != %d, %d" %(div, rem, 2, 0))
+        self.assertEqual(calc.division(-4, -2), (2, 0))
 
     def test_division_4(self):
         calc = Caculator(isAdd=False,
@@ -51,9 +45,7 @@ class MyCalcTest(unittest.TestCase):
                          isMul=False,
                          isDiv=True,
                          isRem=False)
-        div = calc.division(-4, -2)
-        self.assertEqual(div, 2,
-                         msg="not equal:: %d != %d" %(div, 2))
+        self.assertEqual(calc.division(-4, 2), (-2, 0))
 
     def test_error_zero_division(self):
         calc = Caculator(isAdd=False,
