@@ -1,7 +1,6 @@
 # SSL-Lab-seminar-test
 
 [![Build Status](https://travis-ci.org/KeonHeeLee/ssl-lab-test.svg?branch=master)](https://travis-ci.org/KeonHeeLee/ssl-lab-test)
-[![Coverage Status](https://coveralls.io/repos/github/KeonHeeLee/ssl-lab-test/badge.svg?branch=master)](https://coveralls.io/github/KeonHeeLee/ssl-lab-test?branch=master)
 [<img src="https://codedocs.xyz/KeonHeeLee/ssl-lab-test.svg">](https://codedocs.xyz/KeonHeeLee/ssl-lab-test)
 <img src="https://img.shields.io/badge/python-%3E%3D3.4-blue.svg">
 
