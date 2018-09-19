@@ -10,7 +10,7 @@ install:
   - pip install coveralls
 
 script:
-  - nosetests --with-coverage --cover-package=khleepkg03
+  - coverage run --source=khleepkg03 setup.py test
 
 after_success:
   - coveralls
