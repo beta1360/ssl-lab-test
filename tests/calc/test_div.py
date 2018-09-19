@@ -21,7 +21,7 @@ class TestPackage(unittest.TestCase):
                          isMul=False,
                          isDiv=True,
                          isRem=True)
-        self.assertEqual(calc.division(4, 2), (2, 0))
+        self.assertEqual(calc.division(4, 2), (2.0, 0))
 
     def test_division_2(self):
         calc = Caculator(isAdd=False,
@@ -29,7 +29,7 @@ class TestPackage(unittest.TestCase):
                          isMul=False,
                          isDiv=True,
                          isRem=True)
-        self.assertEqual(calc.division(4, -2), (-2, 0))
+        self.assertEqual(calc.division(4, -2), (-2.0, 0))
 
     def test_division_3(self):
         calc = Caculator(isAdd=False,
@@ -37,7 +37,7 @@ class TestPackage(unittest.TestCase):
                          isMul=False,
                          isDiv=True,
                          isRem=True)
-        self.assertEqual(calc.division(-4, -2), (2, 0))
+        self.assertEqual(calc.division(-4, -2), (2.0, 0))
 
     def test_division_4(self):
         calc = Caculator(isAdd=False,
@@ -45,7 +45,7 @@ class TestPackage(unittest.TestCase):
                          isMul=False,
                          isDiv=True,
                          isRem=False)
-        self.assertEqual(calc.division(-4, 2), (-2, 0))
+        self.assertEqual(calc.division(-4, 2), -2.0)
 
     def test_error_zero_division(self):
         calc = Caculator(isAdd=False,
@@ -55,8 +55,9 @@ class TestPackage(unittest.TestCase):
                          isRem=False)
         try:
             calc.division(4, 0)
+
         except Exception as e:
-            self.assertEqual(e, ZeroDivisionError)
+            self.assertRaises(ZeroDivisionError)
 
     def test_type_1(self):
         calc = Caculator(isAdd=False,

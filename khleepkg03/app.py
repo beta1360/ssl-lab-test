@@ -8,37 +8,37 @@ class Caculator:
         self.isRem = isRem
 
     def adder(self, num1, num2):
-        if self.isAdd == True:
+        if self.isAdd:
             sum = num1 + num2
             return sum
         else:
             raise(ValueError)
 
     def substraction(self, num1, num2):
-        if self.isSub == True:
+        if self.isSub:
             return (num1 - num2)
         else:
             raise(ValueError)
 
     def multiplication(self, num1, num2):
-        if self.isMul == True:
+        if self.isMul:
             return (num1 * num2)
         else:
             raise(ValueError)
 
     def division(self, num1, num2):
-        if self.isDiv == True:
+        if self.isDiv:
             try:
                 n = num1 / num2
                 r = num1 % num2
 
-                if self.isRem == True:
+                if self.isRem:
                     return n, r
                 else:
                     return n
 
-            except ZeroDivisionError as error:
-                raise error
+            except ZeroDivisionError as e:
+                raise (e)
 
         else:
             raise(ValueError)
